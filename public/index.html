@@ -1,0 +1,203 @@
+
+  <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="/styles.css">
+      <link rel="icon" type="image/x-icon" href="/photos/logo.jpeg">
+      <title>Cad Services | Home</title>
+    </head>
+    <body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html"><img src="/photos/cad-services.jpeg" alt="Cad Services Logo"></a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="navlink">Home</a>
+            <a href="services.html" class="navlink">Services</a>
+            <a href="contact.html" class="navlink">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  // Toggle menu on hamburger click
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent click from bubbling
+    navLinks.classList.toggle('show');
+  });
+
+  // Prevent clicks inside the menu from closing it
+  navLinks.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // Close menu if clicked anywhere else
+  document.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+  });
+</script><br><br><br><hr><br>
+      <div class="slideshow-container">
+      
+    <div class="slide active" style="background-image: url('uploads/1748852632920.jpg');">
+      <div class="slide-content">
+        <h2>survey</h2>
+        <div class="date">20/06/25</div>
+      </div>
+    </div>
+  
+
+    <div class="slide " style="background-image: url('uploads/1748856684578.jpg');">
+      <div class="slide-content">
+        <h2>land surveyy</h2>
+        <div class="date">06/06/25</div>
+      </div>
+    </div>
+  
+
+    <div class="slide " style="background-image: url('uploads/1748857012965.jpg');">
+      <div class="slide-content">
+        <h2>construction survey</h2>
+        <div class="date">04/06/25</div>
+      </div>
+    </div>
+  
+
+    <div class="slide " style="background-image: url('uploads/1748857063705.jpg');">
+      <div class="slide-content">
+        <h2>survey with client</h2>
+        <div class="date">20/06/25</div>
+      </div>
+    </div>
+  
+
+    <div class="slide " style="background-image: url('uploads/1748857461445.jpg');">
+      <div class="slide-content">
+        <h2>mandir survey</h2>
+        <div class="date">19/06/25</div>
+      </div>
+    </div>
+  
+
+    <div class="slide " style="background-image: url('uploads/1748857618411.jpg');">
+      <div class="slide-content">
+        <h2>sonu bhaiya op</h2>
+        <div class="date">27/06/25</div>
+      </div>
+    </div>
+  
+      <button class="slide-btn prev">🡠</button>
+      <button class="slide-btn next">🡢</button>
+    </div><br><hr><br>
+      <div class="post-container">
+      <h1 style="display:flex;justify-content:center;">Our Projects</h1><br><hr>
+      <div class="posts-container">
+        
+    <div class="post" style="background-image: url('uploads/1748857618411.jpg');">
+      <h2>sonu bhaiya op</h2>
+      <div class="date">27/06/25</div>
+    </div>
+  
+
+    <div class="post" style="background-image: url('uploads/1748852632920.jpg');">
+      <h2>survey</h2>
+      <div class="date">20/06/25</div>
+    </div>
+  
+
+    <div class="post" style="background-image: url('uploads/1748857063705.jpg');">
+      <h2>survey with client</h2>
+      <div class="date">20/06/25</div>
+    </div>
+  
+
+    <div class="post" style="background-image: url('uploads/1748857461445.jpg');">
+      <h2>mandir survey</h2>
+      <div class="date">19/06/25</div>
+    </div>
+  
+
+    <div class="post" style="background-image: url('uploads/1748856684578.jpg');">
+      <h2>land surveyy</h2>
+      <div class="date">06/06/25</div>
+    </div>
+  
+
+    <div class="post" style="background-image: url('uploads/1748857012965.jpg');">
+      <h2>construction survey</h2>
+      <div class="date">04/06/25</div>
+    </div>
+  
+      </div>
+      </div><hr><br>
+
+     <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active');
+          if (i === index) slide.classList.add('active');
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      document.querySelector('.next').addEventListener('click', nextSlide);
+      document.querySelector('.prev').addEventListener('click', prevSlide);
+
+      // Auto slide
+      setInterval(nextSlide, 4000);
+    </script>
+    </body>
+    <footer>
+    <div class="footer"><div class="footer-logo">
+      <img src="/photos/cad-services.jpeg" alt="Cad Services Logo">
+      </div>
+      <div class="footerinfoandlinks">
+      <div class="footer-info">
+      <hr style="margin-bottom:5px;">
+      <h3>At CAD Services, we combine advanced technologies with industry experience to deliver results that meet the highest standards of 
+        quality and efficiency. Whether it's topographic surveys, land development planning, contour mapping, or CAD drafting, our team is 
+        dedicated to turning complex data into clear, actionable insights.</h3>
+      </div>
+      <div class="footer-links">
+        <hr style="margin-bottom:5px;">
+        <h3>SERVICES</h3><br>
+        <h3>Bridge Survey</h3>
+        <h3>Land Survey</h3>
+        <h3>Road Survey</h3>
+        <h3>Survey by Total Station</h3>
+        <h3>Survey by DGPS</h3>
+        <h3>Layout Work</h3>
+        <h3>Center Line Marking</h3>
+        <h3>Training Program</h3><br><br><br>
+        <hr style="margin-bottom:5px;">
+        <div class="social-links">
+        <a href="https://www.facebook.com/p/CAD-Services-100066734150274/" target="_blank"><img src="/photos/fb.png" alt="Facebook" width="25px" height="25px"></a>
+        <a href="https://www.instagram.com/cad.services_indore/" target="_blank"><img src="/photos/ig.png" alt="Instagram" width="25px" height="25px"></a>
+        <h6 style="margin-top:2%;">&copy; 2025 by CAD Services</h6>  
+      </div>
+    </div>
+    <div class="footer-address">
+      <hr style="margin-bottom:5px;">
+      <h3>LOCATED AT</h3><br>
+      <h3>205, Gold Arcade, 3/1, Janjeerwala Square,<br> Opp. Vrindavan restourant, New Palasia, Indore,<br>Madhya Pradesh 452001</h3>
+    </div>
+    </div>
+  </footer>
+    </html>
+  

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cad Services | Contact</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/x-icon" href="/photos/logo.jpeg">
+   <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html"><img src="/photos/cad-services.jpeg" alt="Cad Services Logo"></a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="navlink">Home</a>
+            <a href="services.html" class="navlink">Services</a>
+            <a href="contact.html" class="navlink">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  // Toggle menu on hamburger click
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent click from bubbling
+    navLinks.classList.toggle('show');
+  });
+
+  // Prevent clicks inside the menu from closing it
+  navLinks.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // Close menu if clicked anywhere else
+  document.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+  });
+</script>
+</head>
+<br><br><br><hr><br>
+    <h1 style="display:flex;justify-content: center;">Contact Us</h1>
+    <br><hr>
+    <div class="contactUs-FormandInfo">
+<div class="contactForm-container">
+    <form action="/send-email" method="POST">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required>
+      <div class="form-contact">   
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+      </div>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button type="submit" id="contactForm-submit">Submit</button>
+    </form>
+  </div>
+
+ <div class="contact-info">
+    <h2>Located At</h2>
+    <h4>205, Gold Arcade, 3/1, Janjeerwala Square,<br> Opp. Vrindavan restourant, New Palasia, <br>Indore, Madhya Pradesh 452001</h4><br><br>
+    <h2>Mail us At</h2>
+    <h4>cadservices2000@gmail.com</h4><br><br>
+    <h2>Follow us At</h2><br>
+    <div class="contact-social-links">
+      <a href="https://www.facebook.com/p/CAD-Services-100066734150274/" target="_blank"><img src="/photos/fb.png" alt="Facebook" width="25px" height="25px" style="padding:1px;border-radius: 50px;background-color:#0497ca;"></a><br>
+      <a href="https://www.instagram.com/cad.services_indore/" target="_blank"><img src="/photos/ig.png" alt="Instagram" width="25px" height="25px" style="border-radius:6px;background-color:#0497ca;"></a>
+  </div>
+  </div>
+  </div>
+<hr><br>
+
+<div style="filter: invert(90%) hue-rotate(180deg);">
+<div class="contact-location">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3680.033451499872!2d75.881833!3d22.726998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDQzJzM3LjIiTiA3NcKwNTInNTQuNiJF!5e0!3m2!1sen!2sin!4v1749121484661!5m2!1sen!2sin" 
+  width="100%"
+  height="400"
+  style="border:0;
+  "allowfullscreen="" loading="lazy"
+   referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+</div>
+<br><br><hr><br>
+
+<footer>
+    <div class="footer"><div class="footer-logo">
+      <img src="/photos/cad-services.jpeg" alt="Cad Services Logo">
+      </div>
+      <div class="footerinfoandlinks">
+      <div class="footer-info">
+      <hr style="margin-bottom:5px;">
+      <h3>At CAD Services, we combine advanced technologies with industry experience to deliver results that meet the highest standards of 
+        quality and efficiency. Whether it's topographic surveys, land development planning, contour mapping, or CAD drafting, our team is 
+        dedicated to turning complex data into clear, actionable insights.</h3>
+      </div>
+      <div class="footer-links">
+        <hr style="margin-bottom:5px;">
+      <nav>
+        <h3>SERVICES</h3><br>
+        <h3>Bridge Survey</h3>
+        <h3>Land Survey</h3>
+        <h3>Road Survey</h3>
+        <h3>Survey by Total Station</h3>
+        <h3>Survey by DGPS</h3>
+        <h3>Layout Work</h3>
+        <h3>Center Line Marking</h3>
+        <h3>Training Program</h3>
+      </nav><br><br><br>
+        <hr style="margin-bottom:5px;">
+        <div class="social-links">
+        <a href="https://www.facebook.com/p/CAD-Services-100066734150274/" target="_blank"><img src="/photos/fb.png" alt="Facebook" width="25px" height="25px"></a>
+        <a href="https://www.instagram.com/cad.services_indore/" target="_blank"><img src="/photos/ig.png" alt="Instagram" width="25px" height="25px"></a>
+        <h6 style="margin-top:2%;">&copy; 2025 by CAD Services</h6>  
+      </div>
+    </div>
+    <div class="footer-address">
+      <hr style="margin-bottom:5px;">
+      <h3>LOCATED AT</h3><br>
+      <h3>205, Gold Arcade, 3/1, Janjeerwala Square,<br> Opp. Vrindavan restourant, New Palasia, Indore,<br>Madhya Pradesh 452001</h3>
+    </div>
+    </div>
+  </footer>
+</html>
