@@ -71,8 +71,14 @@ function generatePostPage(post) {
   <!DOCTYPE html>
   <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>${title}</title>
+    
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
+    <meta name="keywords" content="CAD services, land surveyor, land surveyor in indore, Indore survey, civil engineering, civil engineering in indore, topographic survey, topographic survey in indore, construction mapping, contour mapping in indore, layout work in indore, center line marking in indore, DGPS survey in indore, total station survey in indore, training program in indore, bridge survey in indore, road survey in indore, land development planning in indore, cad drafting in indore, cad services in indore, cad services near me, cad services for builders, cad services for architects, cad services for civil engineers">
+    <meta name="author" content="CAD Services">
+    <meta name="robots" content="index, follow">
+    <title>CAD Services | Projects | ${title}</title>
     <link rel="stylesheet" href="/styles.css">
 
     <nav class="navbar">
@@ -343,7 +349,7 @@ function generatePostsHTML(posts) {
       <h3>205, Gold Arcade, 3/1, Janjeerwala Square, New Palasia, Indore, Madhya Pradesh (452001)</h3><br><br><hr style="margin-bottom:5px;">
       <h3>CONTACT US</h3><br>
       <h3>+91 9826773808,<br>+91 9425073808</h3>
-      <h3>cadservices2000@gmail.com</h3>
+      <h6>cadservices2000@gmail.com</h6>
     </div>
     </div>
   </footer>
