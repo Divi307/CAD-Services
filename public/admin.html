@@ -12,11 +12,20 @@
       margin: 15px 0 5px;
       border-radius:3px;
     }
-    input[type="text"], input[type="date"], input[type="file"] {
+    input[type="text"], input[type="date"], input[type="file"],textarea {
       width: 100%;
       padding: 8px;
       box-sizing: border-box;
       border-radius:3px;
+      font-family: inherit;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    #description,input[type="text"], input[type="date"] {
+      border:2px solid black;
+    }
+    #editDescription, #editTitle, #editDate{
+      border:2px solid black;
     }
     button {
       margin-top: 20px;
@@ -62,7 +71,14 @@
   background-color: #96d2ee;
   flex-direction: column;
   text-shadow: 2px 2px 4px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.preview h2, .preview .date{
+  margin: 5px 0;
+}
+
 @media (max-width: 768px) {
   .top-section {
     flex-direction: column;
@@ -94,7 +110,7 @@
   padding: 15px;
   margin-bottom: 20px;
   width: 400px; 
-  height: 250px; 
+  height: 300px; /* increased height for description */
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -106,8 +122,9 @@
 #postsList > div img {
   max-width:300px;
   width: 100%;
-  height: auto;
+  height: 100px;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 #postsList > div strong {
@@ -118,8 +135,13 @@
 
 #postsList > div small {
   font-size: 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-align: center;
+  color: #555;
+}
+
+#postsList > div p.description {
+  display:none;
 }
 
 #postsList > div button {
@@ -142,12 +164,12 @@
   color: white;
 }
 
-
   </style>
 </head>
 <body>
   <nav class="navbar">
         <div class="nav-logo">
+            <a href="index.html"><img src="/photos/logo.jpeg" alt="Cad Services Logo"></a>
             <a href="index.html"><img src="/photos/cad-services.jpeg" alt="Cad Services Logo"></a>
         </div>
         <div class="nav-links" id="navLinks">
@@ -183,10 +205,13 @@
     <label for="date">Date:</label>
     <input type="date" id="date" name="date" required />
 
+    <label for="description">Description:</label>
+    <textarea type="description" id="description" name="description" placeholder="Enter post description" rows="3" required></textarea>
+
     <button type="submit">Add Post</button>
   </form>
 
-  <div class="preview" id="postPreview" style="width:300px;height:200px;background:#eee;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;">
+  <div class="preview" id="postPreview" style="width:300px;height:250px;background:#eee;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;">
     <h2 id="previewTitle">Post Title</h2>
     <div class="date" id="previewDate">DD-MM-YYYY</div>
   </div>
@@ -197,9 +222,10 @@
 
 <div id="overlay" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);z-index:100;"></div>
 <div id="editModal" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);background:#fff;padding:20px;z-index:101;border-radius:6px;box-shadow:0 0 10px rgba(0,0,0,0.3);width:300px;">
-  <h3>Edit Post</h3>
+  <h3>Edit Post</h3><br>
   <input type="text" id="editTitle" placeholder="Edit Title" style="width:100%;margin-bottom:10px;" />
   <input type="date" id="editDate" style="width:100%;margin-bottom:15px;" />
+  <textarea id="editDescription" placeholder="Edit Description" style="width:100%;margin-bottom:15px;resize: vertical;" rows="3"></textarea>
   <button onclick="submitEdit()" style="margin-right:10px;">Save Changes</button>
   <button onclick="closeEditModal()">Cancel</button>
 </div>
@@ -256,6 +282,10 @@ date.style.color = '#555';
 date.style.fontSize = '1rem';
 date.style.textAlign = 'center';
 
+const description = document.createElement('p');
+description.className = 'description';
+description.textContent = post.description || '';
+
 const btns = document.createElement('div');
 btns.style.display = 'flex';
 btns.style.justifyContent = 'center';
@@ -265,7 +295,7 @@ btns.style.width = '100%';
 
 const editBtn = document.createElement('button');
 editBtn.textContent = 'Edit';
-editBtn.onclick = () => openEditModal(post.id, post.title, post.date);
+editBtn.onclick = () => openEditModal(post.id, post.title, post.date, post.description);
 editBtn.style.flex = '1';
 editBtn.style.padding = '8px 0';
 editBtn.style.backgroundColor = '#0288d1';
@@ -293,6 +323,7 @@ btns.appendChild(deleteBtn);
 div.appendChild(img);
 div.appendChild(title);
 div.appendChild(date);
+div.appendChild(description);
 div.appendChild(btns);
 list.appendChild(div);
     });
@@ -310,9 +341,10 @@ list.appendChild(div);
     }
   }
 
-  function openEditModal(id, title, date) {
+  function openEditModal(id, title, date, description) {
     currentEditId = id;
     document.getElementById('editTitle').value = title;
+    document.getElementById('editDescription').value = description || '';
     const parts = date.split('/');
     if(parts.length === 3) {
       const d = parts[0].padStart(2,'0');
@@ -336,8 +368,9 @@ list.appendChild(div);
   async function submitEdit() {
     const newTitle = document.getElementById('editTitle').value;
     const newDateRaw = document.getElementById('editDate').value;
-    if (!newTitle || !newDateRaw) {
-      alert('Title and Date cannot be empty!');
+    const newDescription = document.getElementById('editDescription').value;
+    if (!newTitle || !newDateRaw || !newDescription) {
+      alert('Title, Date, and Description cannot be empty!');
       return;
     }
     const d = new Date(newDateRaw);
@@ -349,7 +382,7 @@ list.appendChild(div);
     const res = await fetch('/edit-post', {
       method: 'POST',
       headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({ id: currentEditId, title: newTitle, date: newDate })
+      body: JSON.stringify({ id: currentEditId, title: newTitle, date: newDate, description: newDescription })
     });
     const data = await res.json();
     if(data.message === 'Post updated successfully') {
@@ -366,9 +399,11 @@ list.appendChild(div);
   const titleInput = document.getElementById('title');
   const dateInput = document.getElementById('date');
   const bgInput = document.getElementById('bgImage');
+  const descriptionInput = document.getElementById('description');
   const previewBox = document.getElementById('postPreview');
   const previewTitle = document.getElementById('previewTitle');
   const previewDate = document.getElementById('previewDate');
+  const previewDescription = document.getElementById('previewDescription');
 
   titleInput.addEventListener('input', () => {
     previewTitle.textContent = titleInput.value || 'Post Title';
@@ -376,6 +411,10 @@ list.appendChild(div);
 
   dateInput.addEventListener('input', () => {
     previewDate.textContent = dateInput.value || 'DD-MM-YYYY';
+  });
+
+  descriptionInput.addEventListener('input', () => {
+    previewDescription.textContent = descriptionInput.value || 'Description preview here...';
   });
 
   bgInput.addEventListener('change', () => {
@@ -405,15 +444,17 @@ list.appendChild(div);
       </div>
       <div class="footer-links">
         <hr style="margin-bottom:5px;">
+      <nav>
         <h3>SERVICES</h3><br>
-        <h3>Bridge Survey</h3>
-        <h3>Land Survey</h3>
-        <h3>Road Survey</h3>
-        <h3>Survey by Total Station</h3>
-        <h3>Survey by DGPS</h3>
-        <h3>Layout Work</h3>
-        <h3>Center Line Marking</h3>
-        <h3>Training Program</h3><br><br><br>
+        <h3> • Bridge Survey</h3>
+        <h3> • Land Survey</h3>
+        <h3> • Road Survey</h3>
+        <h3> • Survey by Total Station</h3>
+        <h3> • Survey by DGPS</h3>
+        <h3> • Layout Work</h3>
+        <h3> • Center Line Marking</h3>
+        <h3> • Training Program</h3>
+      </nav><br><br><br>
         <hr style="margin-bottom:5px;">
         <div class="social-links">
         <a href="https://www.facebook.com/p/CAD-Services-100066734150274/" target="_blank"><img src="/photos/fb.png" alt="Facebook" width="25px" height="25px"></a>
@@ -424,8 +465,13 @@ list.appendChild(div);
     <div class="footer-address">
       <hr style="margin-bottom:5px;">
       <h3>LOCATED AT</h3><br>
-      <h3>205, Gold Arcade, 3/1, Janjeerwala Square,<br> Opp. Vrindavan restourant, New Palasia, Indore,<br>Madhya Pradesh 452001</h3>
+      <h3>205, Gold Arcade, 3/1, Janjeerwala Square, New Palasia, Indore, Madhya Pradesh (452001)</h3><br><br><hr style="margin-bottom:5px;">
+      <h3>CONTACT US</h3><br>
+      <h3>+91 9826773808,<br>+91 9425073808</h3>
+      <h6>cadservices2000@gmail.com</h6>
     </div>
     </div>
   </footer>
 </html>
+</html>
+

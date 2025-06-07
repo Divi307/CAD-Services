@@ -1,0 +1,91 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>about</title>
+    <link rel="stylesheet" href="/styles.css">
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="/index.html"><img src="/photos/logo.jpeg" alt="Cad Services Logo"></a>
+            <a href="/index.html"><img src="/photos/cad-services.jpeg" alt="Cad Services Logo"></a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="/index.html" class="navlink">Home</a>
+            <a href="/services.html" class="navlink">Services</a>
+            <a href="/contact.html" class="navlink">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  // Toggle menu on hamburger click
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent click from bubbling
+    navLinks.classList.toggle('show');
+  });
+
+  // Prevent clicks inside the menu from closing it
+  navLinks.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // Close menu if clicked anywhere else
+  document.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+  });
+</script>
+  </head>
+  <body>
+  <br><br><br><hr><br>
+    <h1 class="newHTMLtitle">about</h1>
+    <br><hr><br>
+    <img src="/uploads/1749289072624.jpg" alt="about" class="newHTMLimg" /><br><hr><br>
+    <h3 class="newHTMLdesc">about us .</h3><br><hr><br>
+    <a href="/index.html" class="newHTMLhomelink"><h3>Back to Home</h3></a><br><hr><br>
+  </body>
+  <footer>
+    <div class="footer"><div class="footer-logo">
+      <img src="/photos/cad-services.jpeg" alt="Cad Services Logo">
+      </div>
+      <div class="footerinfoandlinks">
+      <div class="footer-info">
+      <hr style="margin-bottom:5px;">
+      <h3>At CAD Services, we combine advanced technologies with industry experience to deliver results that meet the highest standards of 
+        quality and efficiency. Whether it's topographic surveys, land development planning, contour mapping, or CAD drafting, our team is 
+        dedicated to turning complex data into clear, actionable insights.</h3>
+      </div>
+      <div class="footer-links">
+        <hr style="margin-bottom:5px;">
+      <nav>
+        <h3>SERVICES</h3><br>
+        <h3> • Bridge Survey</h3>
+        <h3> • Land Survey</h3>
+        <h3> • Road Survey</h3>
+        <h3> • Survey by Total Station</h3>
+        <h3> • Survey by DGPS</h3>
+        <h3> • Layout Work</h3>
+        <h3> • Center Line Marking</h3>
+        <h3> • Training Program</h3>
+      </nav><br><br><br>
+        <hr style="margin-bottom:5px;">
+        <div class="social-links">
+        <a href="https://www.facebook.com/p/CAD-Services-100066734150274/" target="_blank"><img src="/photos/fb.png" alt="Facebook" width="25px" height="25px"></a>
+        <a href="https://www.instagram.com/cad.services_indore/" target="_blank"><img src="/photos/ig.png" alt="Instagram" width="25px" height="25px"></a>
+        <h6 style="margin-top:2%;">&copy; 2025 by CAD Services</h6>  
+      </div>
+    </div>
+    <div class="footer-address">
+      <hr style="margin-bottom:5px;">
+      <h3>LOCATED AT</h3><br>
+      <h3>205, Gold Arcade, 3/1, Janjeerwala Square, New Palasia, Indore, Madhya Pradesh (452001)</h3><br><br><hr style="margin-bottom:5px;">
+      <h3>CONTACT US</h3><br>
+      <h3>+91 9826773808,<br>+91 9425073808</h3>
+      <h6>cadservices2000@gmail.com</h6>
+    </div>
+    </div>
+  </footer>
+  </html>
