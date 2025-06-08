@@ -371,6 +371,21 @@ app.get('/get-posts', (req, res) => {
   res.json(posts);
 });
 
+app.get('/download-index', (req, res) => {
+  const filePathdata = path.join(__dirname, 'data', 'index.json');
+
+  if (fs.existsSync(filePathdata)) {
+    res.download(filePathdata, 'index.json', (err) => {
+      if (err) {
+        console.error('Error sending file:', err);
+        res.status(500).send('Could not download the file.');
+      }
+    });
+  } else {
+    res.status(404).send('index.json file not found.');
+  }
+});
+
 app.post('/send-email', (req, res) => {
   const { fullName, email, phone, message } = req.body;
 
