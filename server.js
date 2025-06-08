@@ -83,8 +83,8 @@ function generatePostPage(post) {
 
     <nav class="navbar">
         <div class="nav-logo">
-            <a href="/index.html"><img src="/photos/logo.jpeg" alt="Cad Services Logo"></a>
-            <a href="/index.html"><img src="/photos/cad-services.jpeg" alt="Cad Services Logo"></a>
+            <a href="/index.html"><img src="/photos/logo.jpeg" alt="Cad Services Logo" width="30px" height="40px"></a>
+            <a href="/index.html"><img src="/photos/cad-services.png" alt="Cad Services Logo" width="220px" height="40px"></a>
         </div>
         <div class="nav-links" id="navLinks">
             <a href="/index.html" class="navlink">Home</a>
@@ -124,7 +124,7 @@ function generatePostPage(post) {
   </body>
   <footer>
     <div class="footer"><div class="footer-logo">
-      <img src="/photos/cad-services.jpeg" alt="Cad Services Logo">
+      <img src="/photos/cad-services.png" alt="Cad Services Logo" width="220px" height="40px">
       </div>
       <div class="footerinfoandlinks">
       <div class="footer-info">
@@ -241,8 +241,8 @@ function generatePostsHTML(posts) {
     <body>
     <nav class="navbar">
         <div class="nav-logo">
-            <a href="index.html"><img src="/photos/logo.jpeg" alt="Cad Services Logo"></a>
-            <a href="index.html"><img src="/photos/cad-services.jpeg" alt="Cad Services Logo"></a>
+            <a href="index.html"><img src="/photos/logo.jpeg" alt="Cad Services Logo" width="30px" height="40px"></a>
+            <a href="index.html"><img src="/photos/cad-services.png" alt="Cad Services Logo" width="220px" height="40px"></a>
         </div>
         <div class="nav-links" id="navLinks">
             <a href="index.html" class="navlink">Home</a>
@@ -314,7 +314,7 @@ function generatePostsHTML(posts) {
     </body>
     <footer>
     <div class="footer"><div class="footer-logo">
-      <img src="/photos/cad-services.jpeg" alt="Cad Services Logo">
+      <img src="/photos/cad-services.png" alt="Cad Services Logo" width="220px" height="40px">
       </div>
       <div class="footerinfoandlinks">
       <div class="footer-info">

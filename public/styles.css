@@ -615,8 +615,9 @@ body {
     .footer-logo{
       display: flex;
       margin-top:2%;
-      margin-left:8%;
+      margin-left:6%;
       margin-bottom: 2%;
+      background-position: center;
     }
     .footerinfoandlinks{
       display:flex;
@@ -648,7 +649,7 @@ body {
       
     }
     .footer-links{
-      margin-left:10%;
+      margin-left:7%;
       max-width:40%
     }
     .footer-address{
