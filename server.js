@@ -73,17 +73,21 @@ function generatePostPage(post) {
   <head>
     
   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
-    <meta name="keywords" content="CAD services, land surveyor, land surveyor in indore, Indore survey, civil engineering, civil engineering in indore, topographic survey, topographic survey in indore, construction mapping, contour mapping in indore, layout work in indore, center line marking in indore, DGPS survey in indore, total station survey in indore, training program in indore, bridge survey in indore, road survey in indore, land development planning in indore, cad drafting in indore, cad services in indore, cad services near me, cad services for builders, cad services for architects, cad services for civil engineers">
     <meta name="author" content="CAD Services">
+    <meta name="description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
+    <meta property="image" content="https://www.cadservices.in/photos/cad-services.png" />
+    <meta property="og:url" content="https://www.cadservices.in/" />
+    <meta name="keywords" content="CAD services, land surveyor, land surveyor in indore, Indore survey, civil engineering, civil engineering in indore, topographic survey, topographic survey in indore, construction mapping, contour mapping in indore, layout work in indore, center line marking in indore, DGPS survey in indore, total station survey in indore, training program in indore, bridge survey in indore, road survey in indore, land development planning in indore, cad drafting in indore, cad services in indore, cad services near me, cad services for builders, cad services for architects, cad services for civil engineers">
     <meta name="robots" content="index, follow">
-    <title>CAD Services | Projects | ${title}</title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/x-icon" href="/photos/logo.png">
+    <title>CAD Services | Projects | ${title}</title>
 
     <nav class="navbar">
         <div class="nav-logo">
-            <a href="/index.html"><img src="/photos/logo.jpeg" alt="Cad Services Logo" width="30px" height="40px"></a>
+            <a href="/index.html"><img src="/photos/logo.png" alt="Cad Services Logo" width="30px" height="40px"></a>
             <a href="/index.html"><img src="/photos/cad-services.png" alt="Cad Services Logo" width="220px" height="40px"></a>
         </div>
         <div class="nav-links" id="navLinks">
@@ -200,18 +204,21 @@ function generatePostsHTML(posts) {
   <!DOCTYPE html>
     <html lang="en">
     <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
-      <meta name="keywords" content="CAD services, land surveyor, land surveyor in indore, Indore survey, civil engineering, civil engineering in indore, topographic survey, topographic survey in indore, construction mapping, contour mapping in indore, layout work in indore, center line marking in indore, DGPS survey in indore, total station survey in indore, training program in indore, bridge survey in indore, road survey in indore, land development planning in indore, cad drafting in indore, cad services in indore, cad services near me, cad services for builders, cad services for architects, cad services for civil engineers">
-      <meta name="author" content="CAD Services">
-      <meta name="robots" content="index, follow">
-      <meta name="google-site-verification" content="dp8sEivN8W0IZXp0uYhnIUyZfxPSifXgayLRmGHOw9c" />
-      <link rel="stylesheet" href="/styles.css">
-      <link rel="icon" type="image/x-icon" href="/photos/logo.jpeg">
-      <title>Cad Services | Home</title>
 
-      <script type="application/ld+json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="dp8sEivN8W0IZXp0uYhnIUyZfxPSifXgayLRmGHOw9c" />
+    <meta name="author" content="CAD Services">
+    <meta name="description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
+    <meta property="image" content="https://www.cadservices.in/photos/cad-services.png" />
+    <meta property="og:url" content="https://www.cadservices.in/" />
+    <meta name="keywords" content="CAD services, land surveyor, land surveyor in indore, Indore survey, civil engineering, civil engineering in indore, topographic survey, topographic survey in indore, construction mapping, contour mapping in indore, layout work in indore, center line marking in indore, DGPS survey in indore, total station survey in indore, training program in indore, bridge survey in indore, road survey in indore, land development planning in indore, cad drafting in indore, cad services in indore, cad services near me, cad services for builders, cad services for architects, cad services for civil engineers">
+    <meta name="robots" content="index, follow">
+    <title>Cad Services | Contact</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/x-icon" href="/photos/logo.png">
+    <title>Cad Services | Home</title>
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -241,7 +248,7 @@ function generatePostsHTML(posts) {
     <body>
     <nav class="navbar">
         <div class="nav-logo">
-            <a href="index.html"><img src="/photos/logo.jpeg" alt="Cad Services Logo" width="30px" height="40px"></a>
+            <a href="index.html"><img src="/photos/logo.png" alt="Cad Services Logo" width="30px" height="40px"></a>
             <a href="index.html"><img src="/photos/cad-services.png" alt="Cad Services Logo" width="220px" height="40px"></a>
         </div>
         <div class="nav-links" id="navLinks">
