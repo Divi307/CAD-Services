@@ -87,7 +87,7 @@ function generatePostPage(post) {
 
     <nav class="navbar">
         <div class="nav-logo">
-            <a href="/index.html"><img src="/photos/logo.png" alt="Cad Services Logo" width="30px" height="40px"></a>
+            <a href="/index.html"><img src="/photos/logo.jpeg" alt="Cad Services Logo" width="30px" height="40px"></a>
             <a href="/index.html"><img src="/photos/cad-services.png" alt="Cad Services Logo" width="220px" height="40px"></a>
         </div>
         <div class="nav-links" id="navLinks">
@@ -225,7 +225,7 @@ function generatePostsHTML(posts) {
     "name": "CAD Services",
     "description": "CAD and land surveying services in Indore since 2000.",
     "url": "https://www.cadservices.in",
-    "logo": "https://www.cadservices.in/photos/logo.jpeg",
+    "logo": "https://www.cadservices.in/photos/logo.png",
     "telephone": "+91-9826773808",
     "address": {
       "@type": "PostalAddress",
@@ -248,7 +248,7 @@ function generatePostsHTML(posts) {
     <body>
     <nav class="navbar">
         <div class="nav-logo">
-            <a href="index.html"><img src="/photos/logo.png" alt="Cad Services Logo" width="30px" height="40px"></a>
+            <a href="index.html"><img src="/photos/logo.jpeg" alt="Cad Services Logo" width="30px" height="40px"></a>
             <a href="index.html"><img src="/photos/cad-services.png" alt="Cad Services Logo" width="220px" height="40px"></a>
         </div>
         <div class="nav-links" id="navLinks">
