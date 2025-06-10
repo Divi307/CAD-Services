@@ -91,7 +91,6 @@ function generatePostPage(post) {
    <meta name="twitter:title" content="CAD Services">
    <meta name="twitter:description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
    <meta name="twitter:image" content="https://cadservices.in/photos/aboutusimg.jpg">
-    <title>Cad Services | Contact</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="icon" type="image/x-icon" href="/photos/logo.png">
     <title>CAD Services | Projects | ${title}</title>
@@ -261,7 +260,6 @@ function generatePostsHTML(posts) {
    <meta name="twitter:title" content="CAD Services">
    <meta name="twitter:description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
    <meta name="twitter:image" content="https://cadservices.in/photos/aboutusimg.jpg">
-    <title>Cad Services | Contact</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="icon" type="image/x-icon" href="/photos/logo.png">
     <title>Cad Services | Home</title>
