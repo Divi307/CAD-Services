@@ -71,19 +71,55 @@ function generatePostPage(post) {
   <!DOCTYPE html>
   <html lang="en">
   <head>
-    
-  <meta charset="UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="dp8sEivN8W0IZXp0uYhnIUyZfxPSifXgayLRmGHOw9c" />
     <meta name="author" content="CAD Services">
     <meta name="description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
-    <meta property="image" content="https://www.cadservices.in/photos/cad-services.png" />
+    <meta property="image" content="https://www.cadservices.in/photos/aboutusimg.jpg" />
     <meta property="og:url" content="https://www.cadservices.in/" />
     <meta name="keywords" content="CAD services, land surveyor, land surveyor in indore, Indore survey, civil engineering, civil engineering in indore, topographic survey, topographic survey in indore, construction mapping, contour mapping in indore, layout work in indore, center line marking in indore, DGPS survey in indore, total station survey in indore, training program in indore, bridge survey in indore, road survey in indore, land development planning in indore, cad drafting in indore, cad services in indore, cad services near me, cad services for builders, cad services for architects, cad services for civil engineers">
     <meta name="robots" content="index, follow">
+   <!-- whatsapp,fb card -->
+    <meta property="og:title" content="CAD Services">
+    <meta property="og:description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
+    <meta property="og:image" content="https://www.cadservices.in/photos/aboutusimg.jpg">
+    <meta property="og:url" content="https://www.cadservices.in/">
+    <meta property="og:type" content="website">
+   <!-- Twitter Card -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="CAD Services">
+   <meta name="twitter:description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
+   <meta name="twitter:image" content="https://cadservices.in/photos/aboutusimg.jpg">
+    <title>Cad Services | Contact</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="icon" type="image/x-icon" href="/photos/logo.png">
     <title>CAD Services | Projects | ${title}</title>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Business",
+    "name": "CAD Services",
+    "description": "CAD and land surveying services in Indore since 2000.",
+    "url": "https://www.cadservices.in",
+    "logo": "https://www.cadservices.in/photos/logo.png",
+    "telephone": "+91-9826773808",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "205, Gold Arcade, 3/1, Janjeerwala Square, New Palasia",
+      "addressLocality": "Indore",
+      "addressRegion": "MP",
+      "postalCode": "452001",
+      "addressCountry": "IN"
+    },
+    "openingHours": "Mo-Sa 09:00-18:00",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 22.727000,
+      "longitude": 75.881833
+    }
+  }
+  </script>
 
     <nav class="navbar">
         <div class="nav-logo">
@@ -210,10 +246,21 @@ function generatePostsHTML(posts) {
     <meta name="google-site-verification" content="dp8sEivN8W0IZXp0uYhnIUyZfxPSifXgayLRmGHOw9c" />
     <meta name="author" content="CAD Services">
     <meta name="description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
-    <meta property="image" content="https://www.cadservices.in/photos/cad-services.png" />
+    <meta property="image" content="https://www.cadservices.in/photos/aboutusimg.jpg" />
     <meta property="og:url" content="https://www.cadservices.in/" />
     <meta name="keywords" content="CAD services, land surveyor, land surveyor in indore, Indore survey, civil engineering, civil engineering in indore, topographic survey, topographic survey in indore, construction mapping, contour mapping in indore, layout work in indore, center line marking in indore, DGPS survey in indore, total station survey in indore, training program in indore, bridge survey in indore, road survey in indore, land development planning in indore, cad drafting in indore, cad services in indore, cad services near me, cad services for builders, cad services for architects, cad services for civil engineers">
     <meta name="robots" content="index, follow">
+   <!-- whatsapp,fb card -->
+    <meta property="og:title" content="CAD Services">
+    <meta property="og:description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
+    <meta property="og:image" content="https://www.cadservices.in/photos/aboutusimg.jpg">
+    <meta property="og:url" content="https://www.cadservices.in/">
+    <meta property="og:type" content="website">
+   <!-- Twitter Card -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="CAD Services">
+   <meta name="twitter:description" content="Professional CAD and land surveying services in Indore since 2000. Trusted by top builders and architects.">
+   <meta name="twitter:image" content="https://cadservices.in/photos/aboutusimg.jpg">
     <title>Cad Services | Contact</title>
     <link rel="stylesheet" href="/styles.css">
     <link rel="icon" type="image/x-icon" href="/photos/logo.png">
@@ -221,7 +268,7 @@ function generatePostsHTML(posts) {
     <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Business",
     "name": "CAD Services",
     "description": "CAD and land surveying services in Indore since 2000.",
     "url": "https://www.cadservices.in",
