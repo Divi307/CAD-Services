@@ -1,9 +1,30 @@
 [
-  {
+ {
     "id": "d672d9b6-5af0-452c-a6ea-7fcd9a51fc37",
     "title": "ROAD SURVEY",
     "date": "20/06/25",
     "bgImage": "uploads/1749380364751.jpg",
-    "description": "Road Survey at Bercha Road using DGPS – CAD Services CAD Services recently conducted a comprehensive road alignment and topographic survey along Bercha Road utilizing Differential Global Positioning System (DGPS) technology. The survey spanned a total length of approximately 4.5 kilometers, covering both the existing carriageway and adjacent right-of-way (ROW) to assist in future road widening, rehabilitation, and design planning. DGPS equipment, specifically a Trimble R2 GNSS receiver, was employed in RTK (Real-Time Kinematic) mode, achieving horizontal positional accuracy within ±10 mm and vertical accuracy within ±15 mm. A base station was established on a known geodetic control point, and a rover unit was used to traverse the alignment, collecting XYZ coordinates, chainage, centerline, edge of pavement, shoulder, culvert positions, and obstruction data at 10-meter intervals. The survey captured key terrain features such as: Existing road profile (carriageway, shoulders, drainage structures), Cross-sections at regular intervals and at all horizontal/vertical curve transitions, Structures and utilities (electric poles, trees, manholes, signage), Land use patterns within 20 meters of ROW. All collected data were processed in AutoCAD Civil 3D and QGIS, where the digital terrain model (DTM), longitudinal profiles, and cross-sections were generated. The datum used was WGS 84, and the projection system was UTM Zone 43N. The final deliverables included: Topographic survey drawings in DWG and PDF formats CSV file of surveyed points Alignment layout plan with benchmarks and KM markers DTM and contour maps (0.25m intervals) A technical report detailing methodologies, instruments, calibration certificates, and accuracy statements. The DGPS survey ensured high precision and formed the foundation for accurate road design and planning in the Bercha Road region."
+    "description": "Road Survey at Bercha Road using DGPS – CAD Services  recently conducted a comprehensive road alignment and topographic survey along Bercha Road utilizing Differential Global Positioning System (DGPS) technology. The survey spanned a total length of approximately 4.5 kilometers, covering both the existing carriageway and adjacent right-of-way (ROW) to assist in future road widening, rehabilitation, and design planning. DGPS equipment, specifically a Trimble R2 GNSS receiver, was employed in RTK (Real-Time Kinematic) mode, achieving horizontal positional accuracy within ±10 mm and vertical accuracy within ±15 mm. A base station was established on a known geodetic control point, and a rover unit was used to traverse the alignment, collecting XYZ coordinates, chainage, centerline, edge of pavement, shoulder, culvert positions, and obstruction data at 10-meter intervals. The survey captured key terrain features such as: Existing road profile (carriageway, shoulders, drainage structures), Cross-sections at regular intervals and at all horizontal/vertical curve transitions, Structures and utilities (electric poles, trees, manholes, signage), Land use patterns within 20 meters of ROW. All collected data were processed in AutoCAD Civil 3D and QGIS, where the digital terrain model (DTM), longitudinal profiles, and cross-sections were generated. The datum used was WGS 84, and the projection system was UTM Zone 43N. The final deliverables included: Topographic survey drawings in DWG and PDF formats CSV file of surveyed points Alignment layout plan with benchmarks and KM markers DTM and contour maps (0.25m intervals) A technical report detailing methodologies, instruments, calibration certificates, and accuracy statements. The DGPS survey ensured high precision and formed the foundation for accurate road design and planning in the Bercha Road region."
+  },
+  {
+    "id": "a55cd074-e593-4623-abdd-e6f27d69e484",
+    "title": "Kshipra River Survey by DGPS for Construction of Triveni Ghat for Sinhasth 2028",
+    "date": "11/06/25",
+    "bgImage": "uploads/1749731399770.jpg",
+    "description": "Kshipra River Survey by DGPS for Construction of Triveni Ghat for Sinhasth 2028"
+  },
+  {
+    "id": "5b238c89-a24e-49d3-ac86-1720b777ae0f",
+    "title": "Survey & Layout of Inter-State Bus Terminal (ISBT) Project by IDA on MR-10 Road, Indore",
+    "date": "30/07/22",
+    "bgImage": "uploads/1749731637431.jpg",
+    "description": "Survey & Layout of Inter-State Bus Terminal (ISBT) Project by IDA on MR-10 Road, Indore"
+  },
+  {
+    "id": "ad373620-047d-47f4-8cde-dac698999078",
+    "title": "कानाडिया रोड़ से खजराना गणेश मंदिर इंदौर तक बनने वाली नई रोड़ का सर्वे कार्य।",
+    "date": "14/11/21",
+    "bgImage": "uploads/1749731789551.jpg",
+    "description": "कानाडिया रोड़ से खजराना गणेश मंदिर इंदौर तक बनने वाली नई रोड़ का सर्वे कार्य।"
   }
 ]
