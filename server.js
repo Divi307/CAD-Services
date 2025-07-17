@@ -207,14 +207,13 @@ function generatePostPage(post) {
   fs.writeFileSync(filePath, htmlContent);
 }
 
-// Helper: Generate index.html with posts
 function generatePostsHTML(posts) {
   const sortedPosts = posts.slice().sort((a, b) => {
     const parseDate = str => {
       const [day, month, year] = str.split('/');
-      return new Date(`20${year}`, month - 1, day); // convert to full year
+      return new Date(`20${year}`, month - 1, day);
     };
-    return parseDate(b.date) - parseDate(a.date); // descending
+    return parseDate(b.date) - parseDate(a.date);
   });
 
   const postCards = sortedPosts.map(post => `
@@ -443,7 +442,7 @@ app.post('/send-email', (req, res) => {
 
   const mailOptions = {
     from: `"${fullName}" <${email}>`,
-    to: 'divijpatidar@gmail.com',    // Admin ka email
+    to: 'divijpatidar.com',    // Admin's email
     subject: 'You have a new message from your website contact form',
     text: `
 New Message from:
@@ -505,7 +504,7 @@ app.post('/add-post', upload.single('bgImage'), (req, res) => {
   posts.push(newPost);
   fs.writeFileSync(postsFile, JSON.stringify(posts, null, 2));
 
-  // Regenerate index.html
+  // Regenerating index.html
   generatePostPage(newPost);  
   const postsHTML = generatePostsHTML(posts);
   fs.writeFileSync(path.join(__dirname, 'public', 'index.html'), postsHTML);
@@ -533,10 +532,10 @@ app.post('/edit-post', (req, res) => {
   // Save updated post data
   fs.writeFileSync(postsFile, JSON.stringify(posts, null, 2));
 
-  // ✅ Regenerate post HTML
+  // Regeneratingg post HTML
   generatePostPage(posts[postIndex]);
 
-  // ✅ Regenerate index.html
+  // Regenerating index.html
   const updatedHTML = generatePostsHTML(posts);
   fs.writeFileSync(path.join(__dirname, 'public', 'index.html'), updatedHTML);
 
